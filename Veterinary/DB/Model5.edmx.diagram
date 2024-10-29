@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7a57af9debd1433b97a95e6e8365b3bd" Name="Diagram1">
+        <EntityTypeShape EntityType="VeterinaryClinicModel.Animals" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeterinaryClinicModel.Appointments" Width="1.5" PointX="7.5" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeterinaryClinicModel.Breed" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeterinaryClinicModel.Clients" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeterinaryClinicModel.Diagnosis" Width="1.5" PointX="7.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeterinaryClinicModel.Gender" Width="1.5" PointX="3" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeterinaryClinicModel.Inventory" Width="1.5" PointX="9.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeterinaryClinicModel.MedicalRecords" Width="1.5" PointX="9.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeterinaryClinicModel.PaymentMethod" Width="1.5" PointX="10.5" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeterinaryClinicModel.Personal" Width="1.5" PointX="5.25" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeterinaryClinicModel.Reason" Width="1.5" PointX="5.25" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeterinaryClinicModel.Recipe" Width="1.5" PointX="12" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeterinaryClinicModel.Role" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeterinaryClinicModel.Services" Width="1.5" PointX="5.25" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeterinaryClinicModel.Specialization" Width="1.5" PointX="3" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeterinaryClinicModel.Species" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeterinaryClinicModel.Status" Width="1.5" PointX="5.25" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeterinaryClinicModel.Supplier" Width="1.5" PointX="7.5" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeterinaryClinicModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeterinaryClinicModel.Tests" Width="1.5" PointX="12" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeterinaryClinicModel.Transactions" Width="1.5" PointX="12.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VeterinaryClinicModel.TypeService" Width="1.5" PointX="3" PointY="17.5" IsExpanded="true" />
+        <AssociationConnector Association="VeterinaryClinicModel.FK_Animals_Breed" ManuallyRouted="false" />
+        <AssociationConnector Association="VeterinaryClinicModel.FK_Animals_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="VeterinaryClinicModel.FK_Animals_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="VeterinaryClinicModel.FK_Appointments_Animals" ManuallyRouted="false" />
+        <AssociationConnector Association="VeterinaryClinicModel.FK_Appointments_Doctors" ManuallyRouted="false" />
+        <AssociationConnector Association="VeterinaryClinicModel.FK_Appointments_Reason" ManuallyRouted="false" />
+        <AssociationConnector Association="VeterinaryClinicModel.FK_Appointments_Services" ManuallyRouted="false" />
+        <AssociationConnector Association="VeterinaryClinicModel.FK_Appointments_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="VeterinaryClinicModel.FK_MedicalRecords_Appointments" ManuallyRouted="false" />
+        <AssociationConnector Association="VeterinaryClinicModel.FK_Transactions_Appointments" ManuallyRouted="false" />
+        <AssociationConnector Association="VeterinaryClinicModel.FK_Breed_Species" ManuallyRouted="false" />
+        <AssociationConnector Association="VeterinaryClinicModel.FK_MedicalRecords_Diagnosis" ManuallyRouted="false" />
+        <AssociationConnector Association="VeterinaryClinicModel.FK_Inventory_Supplier" ManuallyRouted="false" />
+        <AssociationConnector Association="VeterinaryClinicModel.FK_Recipe_Inventory" ManuallyRouted="false" />
+        <AssociationConnector Association="VeterinaryClinicModel.FK_Recipe_MedicalRecords" ManuallyRouted="false" />
+        <AssociationConnector Association="VeterinaryClinicModel.FK_Tests_MedicalRecords" ManuallyRouted="false" />
+        <AssociationConnector Association="VeterinaryClinicModel.FK_Transactions_PaymentMethod" ManuallyRouted="false" />
+        <AssociationConnector Association="VeterinaryClinicModel.FK_Doctors_Specialization" ManuallyRouted="false" />
+        <AssociationConnector Association="VeterinaryClinicModel.FK_Specialization_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="VeterinaryClinicModel.FK_Services_TypeService" ManuallyRouted="false" />
+        <AssociationConnector Association="VeterinaryClinicModel.FK_Tests_Services" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

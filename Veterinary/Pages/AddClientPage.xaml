@@ -1,0 +1,113 @@
+﻿<Page x:Class="Veterinary.Pages.AddClientPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Veterinary.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddClientPage">
+
+    <Grid Background="#D9D9D9">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+        <Viewbox Grid.Column="2" Grid.ColumnSpan="4" Grid.Row="1">
+            <Canvas Width="800" Height="10">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="Фамилия:  " Foreground="#FF352019" FontWeight="Bold" FontFamily="Times New Roman" FontSize="24"></TextBlock>
+                    <TextBox x:Name="SurnameTB" Width="400" Foreground="#FF352019" 
+                             PreviewTextInput="SurnameTB_PreviewTextInput"
+                             FontWeight="Bold" FontFamily="Times New Roman" FontSize="24"></TextBox>
+                </StackPanel>
+            </Canvas>
+        </Viewbox>
+        <Viewbox Grid.Column="2" Grid.ColumnSpan="4" Grid.Row="2">
+            <Canvas Width="800" Height="10">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="Имя:  " Foreground="#FF352019" FontWeight="Bold" FontFamily="Times New Roman" FontSize="24"></TextBlock>
+                    <TextBox x:Name="NameTB" PreviewTextInput="SurnameTB_PreviewTextInput"
+                             Margin="55 0 0 0" Width="400" Foreground="#FF352019" FontWeight="Bold" FontFamily="Times New Roman" FontSize="24"></TextBox>
+                </StackPanel>
+            </Canvas>
+        </Viewbox>
+        <Viewbox Grid.Column="2" Grid.ColumnSpan="4" Grid.Row="3">
+            <Canvas Width="800" Height="10">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="Отчество:  " Foreground="#FF352019" FontWeight="Bold" FontFamily="Times New Roman" FontSize="24"></TextBlock>
+                    <TextBox x:Name="PatronymicTB" PreviewTextInput="SurnameTB_PreviewTextInput"
+                             Width="400" Foreground="#FF352019" FontWeight="Bold" FontFamily="Times New Roman" FontSize="24"></TextBox>
+                </StackPanel>
+            </Canvas>
+        </Viewbox>
+        <Viewbox Grid.Row="0" Grid.Column="0">
+            <Canvas Width="200" Height="10">
+                <Button x:Name="ExitBT" Grid.Column="5" Grid.ColumnSpan="2"
+Grid.Row="6"
+Content="Назад"
+HorizontalAlignment="Left" VerticalAlignment="Center"
+Width="150" Height="34" Background="#FF6E7D64" FontFamily="Times New Roman" FontSize="25" Foreground="#FF352019"
+    Canvas.Left="25" Canvas.Top="-12" Click="ExitBT_Click"></Button>
+            </Canvas>
+        </Viewbox>
+        <Viewbox Grid.Column="2" Grid.ColumnSpan="4" Grid.Row="4">
+            <Canvas Width="800" Height="10">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="Телефон:  " Foreground="#FF352019" FontWeight="Bold" FontFamily="Times New Roman" FontSize="24"></TextBlock>
+                    <TextBox x:Name="PhoneTB" Margin="10 0 0 0" Width="400" Foreground="#FF352019" 
+                             PreviewTextInput="PhoneTB_PreviewTextInput" TextChanged="PhoneTB_TextChanged" 
+                             FontWeight="Bold" FontFamily="Times New Roman" FontSize="24"></TextBox>
+                </StackPanel>
+            </Canvas>
+        </Viewbox>
+        <Viewbox Grid.Column="2" Grid.ColumnSpan="4" Grid.Row="5">
+            <Canvas Width="800" Height="10">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="Email:  " Foreground="#FF352019" FontWeight="Bold" FontFamily="Times New Roman" FontSize="24"></TextBlock>
+                    <TextBox x:Name="EmailTB" Margin="40 0 0 0" Width="400" Foreground="#FF352019" FontWeight="Bold" FontFamily="Times New Roman" FontSize="24"></TextBox>
+                </StackPanel>
+            </Canvas>
+        </Viewbox>
+        <Viewbox Grid.Column="2" Grid.ColumnSpan="4" Grid.Row="6">
+            <Canvas Width="800" Height="10">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="Адрес:  " Foreground="#FF352019" FontWeight="Bold" FontFamily="Times New Roman" FontSize="24"></TextBlock>
+                    <TextBox x:Name="AddressTB" Margin="35 0 0 0" Width="400" Foreground="#FF352019" FontWeight="Bold" FontFamily="Times New Roman" FontSize="24"></TextBox>
+                </StackPanel>
+            </Canvas>
+        </Viewbox>
+
+
+
+
+        <Viewbox Grid.Row="7" Grid.Column="3" Grid.ColumnSpan="2">
+            <Canvas Width="450" Height="10">
+                <Button x:Name="AddBT"
+Content="Сохрнить"
+HorizontalAlignment="Left" VerticalAlignment="Center"
+Width="300" Height="34" Background="#FF6E7D64" FontFamily="Times New Roman" FontSize="20" Foreground="#FF352019"
+     Canvas.Left="75" Canvas.Top="-12" Click="AddBT_Click"></Button>
+            </Canvas>
+        </Viewbox>
+
+    </Grid>
+</Page>

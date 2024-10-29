@@ -1,0 +1,98 @@
+﻿<Page x:Class="Veterinary.Pages.RegistrHomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Veterinary.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="RegistrHomePage">
+
+    <Grid Background="#D9D9D9">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Viewbox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="6" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Canvas Width="850" Height="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Canvas.Left="230" 
+                Canvas.Top="0" 
+                TextAlignment="Center" x:Name="NameTB" VerticalAlignment="Center" HorizontalAlignment="Center"
+                        Foreground="#FF352019" FontWeight="Bold" FontFamily="Times New Roman" FontSize="22"></TextBlock>
+            </Canvas>
+        </Viewbox>
+
+        <Viewbox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="6" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Canvas Width="850" Height="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Canvas.Left="300" 
+        Canvas.Top="0" 
+        TextAlignment="Center" Text="Список клиентов клиники" VerticalAlignment="Center" HorizontalAlignment="Center"
+                Foreground="#FF352019" FontWeight="Bold" FontFamily="Times New Roman" FontSize="22"></TextBlock>
+            </Canvas>
+        </Viewbox>
+
+        <Viewbox Grid.Column="1" Grid.ColumnSpan="7" Grid.RowSpan="4" Margin="0,28,0,28">
+            <Canvas Width="850" Height="10">
+                <ListView x:Name="ClientsLV" SelectionChanged="ClientsLV_SelectionChanged"
+      >
+                    <ListView.View>
+                        <GridView>
+                            <GridView.Columns>
+                                <GridViewColumn Header="ФИО" Width="250">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding FullName}"></TextBlock>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Телефон" Width="200">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding PhoneNumber}"
+                                    TextWrapping="Wrap"></TextBlock>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Email" Width="250">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Email}"></TextBlock>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                            </GridView.Columns>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Canvas>
+        </Viewbox>
+
+        <Viewbox Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="2">
+            <Canvas Width="450" Height="10">
+                <Button x:Name="AddBT"
+Content="Добавить клиента"
+HorizontalAlignment="Left" VerticalAlignment="Center"
+Width="300" Height="34" Background="#FF6E7D64" FontFamily="Times New Roman" FontSize="20" Foreground="#FF352019"
+     Canvas.Left="75" Canvas.Top="-12" Click="AddBT_Click"></Button>
+            </Canvas>
+        </Viewbox>
+    </Grid>
+</Page>
