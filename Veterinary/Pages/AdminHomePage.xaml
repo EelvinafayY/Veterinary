@@ -8,7 +8,153 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="AdminHomePage">
 
-    <Grid>
-        
+    <Grid Background="#D9D9D9">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Viewbox Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0">
+            <Canvas Width="500" Height="10">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Вывести записи за: " Foreground="#FF352019" FontWeight="Bold" FontFamily="Times New Roman" FontSize="24"></TextBlock>
+                    <ComboBox x:Name="DateFilterCB" Width="150"
+              SelectionChanged="DateFilterCB_SelectionChanged">
+                        <ComboBoxItem Content="Сегодня"/>
+                        <ComboBoxItem Content="Вчера"/>
+                        <ComboBoxItem Content="Последние 7 дней"/>
+                        <ComboBoxItem Content="Последний месяц"/>
+                        <ComboBoxItem Content="Все"/>
+                    </ComboBox>
+                </StackPanel>
+            </Canvas>
+        </Viewbox>
+
+
+        <Viewbox Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1">
+            <Canvas Width="500" Height="10">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Сортировать по : " Foreground="#FF352019" FontWeight="Bold" FontFamily="Times New Roman" FontSize="24"></TextBlock>
+                    <ComboBox x:Name="SortOrderCB" Width="150"
+      SelectionChanged="SortOrderCB_SelectionChanged">
+                        <ComboBoxItem Content="По возрастанию"/>
+                        <ComboBoxItem Content="По убыванию"/>
+                    </ComboBox>
+                </StackPanel>
+            </Canvas>
+        </Viewbox>
+
+        <Viewbox Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="2">
+            <Canvas Width="500" Height="10">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Статус записи: " Foreground="#FF352019" FontWeight="Bold" FontFamily="Times New Roman" FontSize="24"></TextBlock>
+                    <ComboBox x:Name="StatusCB" Grid.Column ="1" Grid.ColumnSpan ="2"
+  Grid.Row="1" 
+  HorizontalAlignment="Center" VerticalAlignment="Center"
+  FontSize="18" Foreground="#FF352019"
+Width="180" SelectionChanged="StatusCB_SelectionChanged">
+                        <ComboBoxItem Content="Запланировано"/>
+                        <ComboBoxItem Content="Завершено"/>
+                        <ComboBoxItem Content="Отменено"/>
+                        <ComboBoxItem Content="Все"/>
+                    </ComboBox>
+                </StackPanel>
+            </Canvas>
+        </Viewbox>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Visibility="Visible" Grid.Column="0" Grid.ColumnSpan="8" Grid.RowSpan="3" Grid.Row="3">
+            <ListView x:Name="SheduleLV" Width="832" >
+                <ListView.View>
+                    <GridView>
+                        <GridView.Columns>
+                            <GridViewColumn Header="Дата" Width="150">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Date}"></TextBlock>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Header="Клиент" Width="150">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Animals.Clients.FullName}"
+                                TextWrapping="Wrap"></TextBlock>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Header="Животное" Width="150">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Animals.Name}"></TextBlock>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Header="Услуга" Width="200">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Services.Name}"
+                                TextWrapping="Wrap"></TextBlock>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <GridViewColumn Header="Статус" Width="200">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Status.Name}"></TextBlock>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                        </GridView.Columns>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </ScrollViewer>
+
+        <Viewbox Grid.Column="4" Grid.ColumnSpan="4" Grid.Row="0">
+            <Canvas Width="500" Height="10">
+                <Button x:Name="DiagnosisBT"
+Content="Популярность диагнозов"
+HorizontalAlignment="Left" VerticalAlignment="Center"
+Width="300" Height="34" Background="#FF6E7D64" FontFamily="Times New Roman" FontSize="25" Foreground="#FF352019"
+    Canvas.Left="100" Canvas.Top="-12" Click="DiagnosisBT_Click"></Button>
+            </Canvas>
+        </Viewbox>
+
+        <Viewbox Grid.Column="4" Grid.ColumnSpan="4" Grid.Row="1">
+            <Canvas Width="500" Height="10">
+                <Button x:Name="SpeciasesBT"
+Content="Популярность видов"
+HorizontalAlignment="Left" VerticalAlignment="Center"
+Width="300" Height="34" Background="#FF6E7D64" FontFamily="Times New Roman" FontSize="25" Foreground="#FF352019"
+    Canvas.Left="100" Canvas.Top="-12" Click="SpeciasesBT_Click"></Button>
+            </Canvas>
+        </Viewbox>
+
+        <Viewbox Grid.Column="4" Grid.ColumnSpan="4" Grid.Row="2">
+            <Canvas Width="500" Height="10">
+                <Button x:Name="ServicesBT"
+Content="Популярность услуг"
+HorizontalAlignment="Left" VerticalAlignment="Center"
+Width="300" Height="34" Background="#FF6E7D64" FontFamily="Times New Roman" FontSize="25" Foreground="#FF352019"
+    Canvas.Left="100" Canvas.Top="-12" Click="ServicesBT_Click"></Button>
+            </Canvas>
+        </Viewbox>
     </Grid>
 </Page>

@@ -46,7 +46,7 @@ namespace Veterinary.Pages
             }
             if (currentPersonal != null && currentPersonal.Specialization.RoleId == 1)
             {
-                //NavigationService.Navigate(new AdminHomePage(currentPersonal));
+                NavigationService.Navigate(new AdminHomePage(currentPersonal));
             }
             if (currentPersonal != null && currentPersonal.Specialization.RoleId == 3)
             {
