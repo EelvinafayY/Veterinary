@@ -127,6 +127,8 @@ Width="300" Height="34" Background="#FF6E7D64" FontFamily="Times New Roman" Font
             </Canvas>
         </Viewbox>
 
+        
+
         <Viewbox Grid.Row="0" Grid.Column="0">
             <Canvas Width="200" Height="10">
                 <Button x:Name="ExitBT" Grid.Column="5" Grid.ColumnSpan="2"

@@ -47,5 +47,11 @@ namespace Veterinary.Pages
                   NavigationService.Navigate(new InfoClientPage(client));
             }
         }
+
+        private void ExitBT_Click(object sender, RoutedEventArgs e)
+        {
+            DBConnection.loginedPersonal = null;
+            NavigationService.Navigate(new AuthorizationPage());
+        }
     }
 }

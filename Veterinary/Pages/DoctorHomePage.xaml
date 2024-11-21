@@ -29,7 +29,16 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-
+        <Viewbox Grid.Row="0" Grid.Column="0">
+            <Canvas Width="200" Height="10">
+                <Button x:Name="ExitBT" Grid.Column="5" Grid.ColumnSpan="2"
+Grid.Row="6"
+Content="Назад"
+HorizontalAlignment="Left" VerticalAlignment="Center"
+Width="150" Height="34" Background="#FF6E7D64" FontFamily="Times New Roman" FontSize="25" Foreground="#FF352019"
+    Canvas.Left="25" Canvas.Top="-12" Click="ExitBT_Click"></Button>
+            </Canvas>
+        </Viewbox>
         <Viewbox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="6" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Canvas Width="850" Height="10" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <TextBlock Canvas.Left="200" 

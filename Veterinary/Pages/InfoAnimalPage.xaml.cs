@@ -43,7 +43,7 @@ namespace Veterinary.Pages
 
         private void ExitBT_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.GoBack();
+            NavigationService.Navigate(new InfoClientPage(contextClient));
         }
 
         private void DeleteBT_Click(object sender, RoutedEventArgs e)
@@ -51,6 +51,11 @@ namespace Veterinary.Pages
             DBConnection.veterinary.Animals.Remove(contextAnimal);
             DBConnection.veterinary.SaveChanges();
             NavigationService.Navigate(new InfoClientPage(contextClient));
+        }
+
+        private void AddRecordBT_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new AddRecordPage(contextAnimal, contextClient));
         }
     }
 }

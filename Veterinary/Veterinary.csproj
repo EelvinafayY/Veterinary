@@ -244,6 +244,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\AddRecordPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\AdminHomePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -295,6 +299,9 @@
     </Compile>
     <Compile Include="Pages\AddClientPage.xaml.cs">
       <DependentUpon>AddClientPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddRecordPage.xaml.cs">
+      <DependentUpon>AddRecordPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\AdminHomePage.xaml.cs">
       <DependentUpon>AdminHomePage.xaml</DependentUpon>

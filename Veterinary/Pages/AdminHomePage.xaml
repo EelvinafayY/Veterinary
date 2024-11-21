@@ -45,7 +45,16 @@
                 </StackPanel>
             </Canvas>
         </Viewbox>
-
+        <Viewbox Grid.Row="8" Grid.Column="0">
+            <Canvas Width="200" Height="10">
+                <Button x:Name="ExitBT" Grid.Column="5" Grid.ColumnSpan="2"
+Grid.Row="6"
+Content="Назад"
+HorizontalAlignment="Left" VerticalAlignment="Center"
+Width="150" Height="34" Background="#FF6E7D64" FontFamily="Times New Roman" FontSize="25" Foreground="#FF352019"
+    Canvas.Left="25" Canvas.Top="-12" Click="ExitBT_Click"></Button>
+            </Canvas>
+        </Viewbox>
 
         <Viewbox Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1">
             <Canvas Width="500" Height="10">

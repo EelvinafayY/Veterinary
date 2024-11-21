@@ -76,7 +76,7 @@
         <Viewbox Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="5">
             <Canvas Width="800" Height="10">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <TextBlock Text="Возраст:  " Foreground="#FF352019" FontWeight="Bold" FontFamily="Times New Roman" FontSize="24"></TextBlock>
+                    <TextBlock Text="Дата рождения:  " Foreground="#FF352019" FontWeight="Bold" FontFamily="Times New Roman" FontSize="24"></TextBlock>
                     <TextBlock x:Name="AgeTB" Foreground="#FF352019" FontWeight="Bold" FontFamily="Times New Roman" FontSize="24"></TextBlock>
                 </StackPanel>
             </Canvas>

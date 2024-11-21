@@ -62,5 +62,6 @@ namespace Veterinary.Pages
             DBConnection.veterinary.SaveChanges();
             NavigationService.Navigate(new RegistrHomePage(DBConnection.loginedPersonal));
         }
+
     }
 }

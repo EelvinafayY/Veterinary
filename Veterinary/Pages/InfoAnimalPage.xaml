@@ -136,5 +136,17 @@ Width="150" Height="34" Background="#FF6E7D64" FontFamily="Times New Roman" Font
                 </ListView>
             </Canvas>
         </Viewbox>
+
+
+        <Viewbox Grid.Row="5" Grid.Column="5" Grid.ColumnSpan="2">
+            <Canvas Width="400" Height="10">
+                <Button x:Name="AddRecordBT" Grid.Column="5" Grid.ColumnSpan="2"
+Grid.Row="8"
+Content="Записать животное"
+HorizontalAlignment="Left" VerticalAlignment="Top"
+Width="300" Height="34" Background="#FF6E7D64" FontFamily="Times New Roman" FontSize="25" Foreground="#FF352019"
+    Canvas.Left="47" Canvas.Top="71" Click="AddRecordBT_Click"></Button>
+            </Canvas>
+        </Viewbox>
     </Grid>
 </Page>
